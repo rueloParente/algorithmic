@@ -127,5 +127,45 @@ class RemainderOperatorTest {
         // Assert
         assertEquals(expected, actual);
     }
+    @Test
+    void shouldReturnNumberOfOddDigitsInNumber() {
+        // Arrange
+        int num = 123;
+        int expected = 2;
+        // Act
+        int actual = RemainderOperator.numberOddDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnNumberOfOddDigitsInNegativeNumber() {
+        // Arrange
+        int num = -125;
+        int expected = 2;
+        // Act
+        int actual = RemainderOperator.numberOddDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnNumberOfOddDigitsInSingleDigitNumber() {
+        // Arrange
+        int num = 5;
+        int expected = 1;
+        // Act
+        int actual = RemainderOperator.numberOddDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnNumberOfOddDigitsInZero() {
+        // Arrange
+        int num = 0;
+        int expected = 0;
+        // Act
+        int actual = RemainderOperator.numberOddDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
 
 }

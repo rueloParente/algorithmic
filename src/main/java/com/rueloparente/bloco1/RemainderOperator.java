@@ -29,4 +29,13 @@ public class RemainderOperator {
         }
         return counter;
     }
+
+    public static int numberOddDigitsInNumber (int num){
+        int[] digits =  algorithmsOfNumberIntoArray(num);
+        int counter = 0;
+        for (int i = 0; i<digits.length; i++){
+            if (!EvenOrOdd.checksIfNumberIsPair(digits[i])) counter ++;
+        }
+        return counter;
+    }
 }
