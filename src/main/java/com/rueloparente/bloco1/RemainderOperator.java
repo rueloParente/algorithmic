@@ -49,4 +49,15 @@ public class RemainderOperator {
         }
         return sum;
     }
+
+    public static int sumOfEvenDigitsInNumber (int num){
+        int sum = 0;
+        num = Math.abs(num);
+        while (num >0){
+            int digit = num % 10;
+            if (EvenOrOdd.checksIfNumberIsPair(digit)) sum += digit;
+            num /= 10;
+        }
+        return sum;
+    }
 }
