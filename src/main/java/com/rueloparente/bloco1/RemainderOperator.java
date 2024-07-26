@@ -38,4 +38,15 @@ public class RemainderOperator {
         }
         return counter;
     }
+
+    public static int sumOfDigitsInNumber (int num){
+        int sum = 0;
+        num = Math.abs(num);
+        while (num > 0){
+            int digit = num % 10;
+            sum += digit;
+            num /= 10;
+        }
+        return sum;
+    }
 }

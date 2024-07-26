@@ -168,4 +168,45 @@ class RemainderOperatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void shouldReturnSumOfDigitsInNumber() {
+        // Arrange
+        int num = 123;
+        int expected = 6;
+        // Act
+        int actual = RemainderOperator.sumOfDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnSumOfDigitsInNegativeNumber() {
+        // Arrange
+        int num = -123;
+        int expected = 6;
+        // Act
+        int actual = RemainderOperator.sumOfDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnSumOfDigitsInSingleDigitNumber() {
+        // Arrange
+        int num = 5;
+        int expected = 5;
+        // Act
+        int actual = RemainderOperator.sumOfDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldReturnSumOfDigitsInZero() {
+        // Arrange
+        int num = 0;
+        int expected = 0;
+        // Act
+        int actual = RemainderOperator.sumOfDigitsInNumber(num);
+        // Assert
+        assertEquals(expected, actual);
+    }
+
 }
